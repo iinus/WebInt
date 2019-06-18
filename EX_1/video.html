@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Exercise 3</title>
+  </head>
+  <body>
+  <script src="app.js"></script>
+
+  <!-- Header -->
+    <div id="header-container">
+        <h1 id="header-heading"> Video </h1>
+    </div>
+
+  <!-- Video with form and buttons -->
+    <div id="video-container">
+        <button id="previewvid" type="button" onClick="previewVideo()"> Preview </button>
+        <button id="rotate" type="button" onClick="rotateVideo()"> Rotate video </button>
+        <button id="mirror" type="button" onClick="mirrorVideo()"> Mirror </button>
+        <input id="controller" type="checkbox" onClick="showHideControls()"> Hide controls </input> <br><br>
+    <video id="video01" controls >
+        <source id="videosource" src="https://ia902803.us.archive.org/15/items/300x250_april/karoq_video_300x250.mp4" type="video/mp4"> 
+    </video> <br>
+    <form id="form03">
+        <input id="url" type="url" placeholder="Place your own video url here" onInput="loadNewVideo()" accept="video/mp4" /><br>
+        <input id="jump" type="number" placeholder="Offset" name="jump" onInput="jumpToOffset()" />
+    </form>
+    </div>    
+    <div id="canvas-container">
+    <canvas id="canvas01"></canvas>
+    </div>
+
+
+<!-- Video in bubble shape -->
+    <h1 id="buble-header"> Bubble video <h1>
+    <div id="bubble-container" onclick="playPauseBubble()">
+    <video id="video-bubble" controls loop>
+        <source src="https://ia601500.us.archive.org/3/items/electricsheep-flock-247-30000-2/00247%3D30082%3D30061%3D29858.mp4" type="video/mp4"> 
+    </video>
+    </div>
+
+  </body>
+</html>

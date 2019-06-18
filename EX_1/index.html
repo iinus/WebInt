@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Exercise 3</title>
+  </head>
+  <body>
+
+<!-- Header -->
+    <div id="header-container">
+        <h1 id="header-heading"> WebInt Social </h1>
+        <nav id="header-nav">
+            <a id="header-link" href="register.html">  Register  </a>
+            <a id="header-link" href="video.html">  Video </a>
+            <a id="header-link" href="videoPlayer.html">  Jukebox  </a>
+        </nav>
+    </div>
+
+<!-- Map with form-->
+    <script id="initMap" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqGGfSQ0BDS19oVaNEjQsoENNMdsQP03U"
+    async defer></script>
+    <script src="app.js"></script>
+    <body onload="initMap()">
+        <div id="map"> </div>
+    </body>
+    <div id="form-container">
+    <form id="form02">
+        <p> You can update to a new location by specifiying a new address.</p>
+        <input id="street" type="street" placeholder="Street" name="street" /><br>
+        <input id="city" type="city" placeholder="City" name="city" /><br>
+        <input id="zipcode" type="zipcode" placeholder="Zip code" name="zipcode" /><br>
+        <input id="country" type="country" placeholder="Country" name="country" /><br><br>
+        <button id="update" onClick="updateMap()" type="button" > Update </button>
+    </form>
+    </div> 
+
+</body>
+</html>
+
